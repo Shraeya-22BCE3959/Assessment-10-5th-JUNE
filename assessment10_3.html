@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Login</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      width: 350px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container h2 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .input-group span {
+      background: #f0f0f0;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .login-btn {
+      background-color: #0095f6;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .options a {
+      color: #0095f6;
+      text-decoration: none;
+    }
+
+    .signup {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .signup a {
+      color: #0095f6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Instagram</h2>
+    <div class="input-group">
+      <span>👤</span>
+      <input type="text" placeholder="Username" id="username">
+    </div>
+    <div class="input-group">
+      <span>🔒</span>
+      <input type="password" placeholder="Password" id="password">
+    </div>
+    <button class="login-btn" onclick="login()">Log in</button>
+
+    <div class="options">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <div class="signup">
+      Don’t have an account? <a href="#">Sign up here.</a>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === '' || pass === '') {
+        alert("Please fill in both fields.");
+      } else {
+        alert("Logged in as " + user);
+      }
+    }
+  </script>
+
+</body>
+</html>
